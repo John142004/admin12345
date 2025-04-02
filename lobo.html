@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=/, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+         body{
+            background-position: center, center/cover;
+            background: url('https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?ga=GA1.1.1468221698.1742365243&semt=ais_hybrid');
+background-repeat: no-repeat;
+
+         }  
+         
+    </style>
+    <div class="container">
+        <h1>Login</h1>
+
+        <input type="text" id="username" name="username" placeholder="Username">
+        <input type="password" id="password" name="password" placeholder="Password">
+        <button id="loginBtn" onclick="login()">Login</button>
+        <p class="error" id="errorMessage"></p>
+    </div>
+
+    <script>
+        let cooldownActive = false;
+
+        function login () {
+            if (cooldownActive) return;
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let errorMessage = document.getElementById("errorMessage").value;
+            let loginBtn = document.getElementById("loginBtn");
+
+            let validUsername = "admin123";
+            let validPassword = "admin123";
+
+            if(username == validUsername && password === validPassword){
+                window.location.href ="https://john142004.github.io/John142004/";
+            }else{
+                errorMessage.textContent = "Invalid username or password, Please Try Again!";
+                loginBtn.disable = true;
+                cooldownActive = true;
+
+                setTimeout(() =>{
+                    errorMessage.textContent = "";
+                    loginBtn.disabled = false;
+                    cooldownActive = true;
+                }, 10000);
+             
+            }
+        }
+    </script>
+</body>
+</html>

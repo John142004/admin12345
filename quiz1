@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+function userProfile(name,age,city) {
+    if (name == "" || age == "") {
+	console.log("Name and age are required fields.");
+	}else{
+	   if(age 0 > 10){
+	        document.write("Child.");
+            
+	}else{
+       if(age 13 > 19){
+            document.write("Teenager.");
+       if(age 20 > 64){
+           document.write("Adult.");
+        if(age > 64){
+           document.write("Senior.");
+	 }
+}
+
+const profile = {
+	name: name,
+	age: age,
+	city: city,
+  }
+}
+
+function displayProfile(profile){
+	console.log("Name:" + profile.name);
+	console.log("Age:" + profile.age);
+	console.log("City:" + profile.city);
+	displayPrdofile(profile);
+
+}
+
+userProfile("Alice",25, "New York")
+userProfile("Bob",17, "Los Angeles")
+
+
+</script>
+</head>
+</html>
